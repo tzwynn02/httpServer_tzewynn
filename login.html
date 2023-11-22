@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>HTTP Server</title>
+</head>
+<body>
+{{if .Success}}
+<h3>Your Login Has Been Successful!</h3>
+{{else}}
+
+{{if .Error_em}}
+<h3>Your Email Does Not Exist!</h3>
+{{else}}
+
+{{if .Error_pw}}
+<h3>Your Password Is Invalid!</h3>
+{{else}}
+<h2 style="margin-left: 90px;">Login</h2>
+<form method="post" action="">
+    <label for = email>Email:</label>
+    <input type="email" name="email" style="margin-left: 23px;" required/><br/><br/>
+    <label for="password">Password:</label>
+    <input type="password" name="password" required/><br/><br/>
+    <button type="submit" style="margin-left: 13%;">Submit</button>
+</form>
+{{end}}  
+{{end}}
+{{end}}  
+</body>
+</html>
