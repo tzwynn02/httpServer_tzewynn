@@ -27,7 +27,7 @@ func main() {
 	}
 	stmt.Exec()
 	//insert value
-	result, err := db.Exec("INSERT OR IGNORE INTO user (email, password) VALUES (?, ?)", "abc@gmail.com","123")
+	result, err := db.Exec("INSERT OR IGNORE INTO user (email, password) VALUES (?, ?),(?, ?)", "abc@gmail.com","123", "www@gmail.com", "111",)
 	if err != nil{
 		log.Println("Error inserting value!", err)
 	}
